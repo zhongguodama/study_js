@@ -1,0 +1,18 @@
+
+<body>
+    <div id = "e" class = "o q">e</div>
+    <div id = "p" class = "t q">p</div>
+    <div id = "l" class = "h q">l</div>
+    <div id = "a" class = "m q">a</div>
+    <div id = "m" class = "n q">m</div>
+    <div id = "newdiv"></div>
+</body>
+
+<script>
+    var divArr = Array.from(document.querySelectorAll(".q"))
+    divArr.sort(function(a, b) {return a.id > b.id ? -1: 1}) 
+    var newDiv = document.querySelector("#newdiv")
+    divArr.forEach(function(el) {
+        newDiv.appendChild(el)
+    })
+</script>
